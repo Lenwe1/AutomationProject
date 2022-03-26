@@ -15,7 +15,10 @@ public class HomePage extends BasePage {
     private By signInButton = By.id("btn1");
     private By skipSignInButton = By.id("btn2");
     private By emailField = By.id("email");
-    private By nextButton = By.id("entering");
+    private By nextButton = By.id("enterimg");
+    private By insertEmail = By.xpath("//input[@type='text']");
+    private By insertPassword = By.xpath("//input[@type='password']");
+    private By enterButton = By.id("enterbtn");
 
 
     private HomePage(){
@@ -53,4 +56,31 @@ public class HomePage extends BasePage {
         LOG.info("Check email field");
         driver.findElement(emailField).sendKeys(email);
     }
+
+
+    public void clickNextButton() {
+        LOG.info("Click Next button");
+        driver.findElement(nextButton).click();
+    }
+
+    public void insertEmail(String email) {
+        LOG.info("Insert Email");
+        driver.findElement(insertEmail).sendKeys(email);
+
+    }
+
+    public void insertPassword(String password) {
+        LOG.info("Insert Email");
+        driver.findElement(insertPassword).sendKeys(password);
+
+    }
+
+    public void clickEnterButton(){
+        LOG.info("Click Enter Button");
+        driver.findElement(enterButton).click();
+    }
+
+
+
+
 }

@@ -25,4 +25,27 @@ public class BasePage {
         LOG.info("Close the browser");
         driver.quit();
     }
+
+    public static void sleep(long ms) {
+        try {
+            Thread.sleep(ms);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+//        Thread.sleep(long ms);
+
+
+    }
+    public static String returnBaseUrl(){
+        return "http://demo.automationtesting.in/Index.html";
+    }
+
+    public static String getBaseUrl() {
+        String baseUrl = returnBaseUrl();
+        if (baseUrl != null) {
+            return baseUrl.replace("Index.html", "");
+        }
+        return baseUrl;
+
+    }
 }
