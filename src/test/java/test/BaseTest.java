@@ -6,14 +6,20 @@ import pages.BasePage;
 
 import pages.Register.Register;
 import pages.homepage.HomePage;
+import pages.switchTo.Alert;
+import pages.switchTo.Frame;
+import pages.switchTo.Window;
 
 public class BaseTest {
 
     public HomePage homePage = HomePage.getInstance();
     public Register register = Register.getInstance();
+    public Alert alert = Alert.getInstance();
+    public Window window = Window.getInstance();
+    public Frame frames = Frame.getInstance();
 
     @BeforeSuite
-    private void init() {
+    public void init() {
         BasePage.setUp();
     }
 
@@ -21,6 +27,7 @@ public class BaseTest {
     public void tearDown() {
         BasePage.tearDown();
     }
+
 
 
 

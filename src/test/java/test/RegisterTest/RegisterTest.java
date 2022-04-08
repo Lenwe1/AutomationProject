@@ -1,5 +1,6 @@
 package test.RegisterTest;
 
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import test.BaseTest;

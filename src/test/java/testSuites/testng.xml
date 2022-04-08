@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="testng" verbose="1">
+    <test name="PositiveTest">
+        <classes>
+            <class name="test.homepageTest.HomePageTest">
+            </class>
+
+            <class name="test.RegisterTest.RegisterTest">
+            </class>
+
+            <class name="test.switchToTest.AlertTest">
+            </class>
+
+            <class name="test.switchToTest.FrameTest">
+            </class>
+
+            <class name="test.switchToTest.WindowTest">
+            </class>
+        </classes>
+    </test>
+
+</suite>
